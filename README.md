@@ -47,6 +47,14 @@ cd ./backend
 bundle install
 ```
 
+3. Configure o .env
+
+```bash
+# Vale lembrar que é importante verificar as informações do banco de dados, para assegurar as funcionalidade do sistema
+
+MEU_APP_DATABASE_PASSWORD=SUA_SENHA_AQUI
+```
+
 3. Configure o banco de dados:
 
 ```bash
@@ -92,10 +100,14 @@ O frontend estará disponível em `http://localhost:3000`.
 
 ---
 
-## 🛠 Tecnologias Usadas
+## Tecnologias Usadas
 
 - **Backend:** Ruby on Rails, PostgreSQL
 - **Frontend:** React + Next.js + Tailwind CSS
 - **Validação de Formulários:** Zod
 - **Requisições HTTP:** Axios
 - **Controle de Estado e Contextos:** React Context API
+
+### Vídeo com demonstração das funcionalidades:
+
+`https://www.youtube.com/watch?v=Pg3p0kz6XwI`
