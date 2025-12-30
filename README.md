@@ -60,7 +60,11 @@ MEU_APP_DATABASE_PASSWORD=SUA_SENHA_AQUI
 ```bash
 rails db:create
 rails db:migrate
+# O ADM vai ser criado, é importante acessar por ele pois o aluno precisa estar associado a uma turma e o ADM é responsável por criá-la;
 rails db:seed
+
+#admin@email.com
+#123456
 ```
 
 4. Rode o servidor Rails:
