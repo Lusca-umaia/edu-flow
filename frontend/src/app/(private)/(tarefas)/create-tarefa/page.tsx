@@ -5,7 +5,6 @@ import { fields, TarefaSchema, tarefaSchema, initialFormData } from "../utils";
 import { useFormSubmit } from "@/hooks/useFormSubmit";
 import Loading from "@/components/UI/Loading/Loading";
 import Header from "@/components/UI/Header/Header";
-import { cadastrarDisciplina } from "@/services/disciplina/cadastrarDisciplina";
 import { useFetch } from "@/hooks/useFetch";
 import { useMemo } from "react";
 import { GenericInput } from "@/components/UI/GenericInput/GenericInput";

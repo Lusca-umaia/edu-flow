@@ -1,4 +1,5 @@
 import { Field } from "@/@types/global";
+import dayjs from "dayjs";
 import z from "zod";
 
 export const tarefaSchema = z.object({
@@ -13,12 +14,16 @@ export const tarefaSchema = z.object({
       message: "Disciplina é obrigatória",
     }),
 
-  prazo: z
-    .string()
-    .refine(
-      (value) => /^\d{2}\/\d{2}\/\d{4}$/.test(value),
-      "Informe uma data válida (DD/MM/AAAA)"
-    ),
+  prazo: z.string().refine((value) => {
+    const [day, month, year] = value.split("/").map(Number);
+
+    if (month < 1 || month > 12) return false;
+
+    const maxDays = dayjs(`${year}-${month}-01`).daysInMonth();
+    if (day < 1 || day > maxDays) return false;
+
+    return true;
+  }, "Informe uma data válida (DD/MM/AAAA)"),
 
   descricao: z
     .string()
