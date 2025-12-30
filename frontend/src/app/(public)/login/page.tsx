@@ -78,10 +78,10 @@ export default function Login() {
               />
               <button
                 type="submit"
-                className="flex cursor-pointer bg-gray-900 hover:bg-gray-800 focus-visible:outline-gray-900 w-full justify-center rounded-md px-3 py-1.5 text-sm/6 font-semibold text-white shadow-sm focus-visible:outline-offset-2"
+                disabled={isLoading}
+                className="flex cursor-pointer disabled:opacity-80 bg-gray-900 hover:bg-gray-800 focus-visible:outline-gray-900 w-full justify-center rounded-md px-3 py-1.5 text-sm/6 font-semibold text-white shadow-sm focus-visible:outline-offset-2"
               >
-                Entrar
-                {/* {isLoading ? "Entrando...", } Entrar */}
+                {isLoading ? "Entrando..." : "Entrar"}
               </button>
             </form>
           </div>
