@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nome: MyString
+  prazo: 2025-12-27 16:11:38
+  descricao: MyText
+  turma: one
+  disciplina: one
+
+two:
+  nome: MyString
+  prazo: 2025-12-27 16:11:38
+  descricao: MyText
+  turma: two
+  disciplina: two
